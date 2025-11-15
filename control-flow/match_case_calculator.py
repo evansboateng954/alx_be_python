@@ -1,0 +1,22 @@
+first = int(input("Enter the first number:"))
+second = int(input("Enter the second number:"))
+operation = input("Chose the operation(+, -, *, /):")
+
+match operation:
+    case "+":
+        print(f" The result is {first + second}") 
+
+    case "*":
+        print(f" The result is {first * second}")
+
+    case "-":
+        print(f" The result is {first - second}")
+
+    case "/":
+        if second == 0:
+            print("Cannot divide by zero")
+        else:
+            print(f" The result is {first / second}")
+
+    case _:
+        print("Invalid operator")
