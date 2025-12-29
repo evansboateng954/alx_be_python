@@ -5,22 +5,38 @@ def display_menu():
     print("3. View List")
     print("4. Exit")
 
+
 def main():
     shopping_list = []
+
+    def add_item():
+        item = input("Enter item ")
+        shopping_list.append(item)
+
+    def remove_item():
+        item = input("Enter item name to remove ")
+        if item not in shopping_list:
+            print(f"{item} not in list")
+
+        else:
+            shopping_list.remove(item)
+
+    def view_list():
+            for item in shopping_list:
+                print(item)
+
     while True:
         display_menu()
         choice = input("Enter your choice: ")
 
         if choice == '1':
-            item_name = input("Enter item to add: ")
-          shopping_list.append(item_name)
-          
+            add_item()
+
         elif choice == '2':
-          item_name = input("Enter name of item")
-          shopping_list.remove(item_name)
+            remove_item()
 
         elif choice == '3':
-            print(list(shopping_list))
+            view_list()
 
         elif choice == '4':
             print("Goodbye!")
