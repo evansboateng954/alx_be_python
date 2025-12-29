@@ -10,11 +10,11 @@ def main():
     shopping_list = []
 
     def add_item():
-        item = input("Enter item to add ")
+        item = input("Enter item to add: ")
         shopping_list.append(item)
 
     def remove_item():
-        item = input("Enter item name to remove ")
+        item = input("Enter item name to remove: ")
         if item not in shopping_list:
             print(f"{item} not in list")
 
